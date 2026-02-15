@@ -16,7 +16,7 @@ The agent reads this doc, finds the **next step** from the progress table below,
 
 | Step | Summary | Status |
 |------|---------|--------|
-| 1.1 | Project Setup (Expo, TypeScript, Router, folder structure) | pending |
+| 1.1 | Project Setup (Expo, TypeScript, Router, folder structure) | complete |
 | 1.2 | Core Type Definitions (datamodels → game-engine/types) | pending |
 | 1.3 | Constants File (GAME_DRAW_ANIMATION_MS, CRAYOLA_8, defaults) | pending |
 | 1.4 | Game Contract Interface (contract.ts, GameContract) | pending |
