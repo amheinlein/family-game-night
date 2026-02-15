@@ -17,39 +17,39 @@ The agent reads this doc, finds the **next step** from the progress table below,
 | Step | Summary | Status |
 |------|---------|--------|
 | 1.1 | Project Setup (Expo, TypeScript, Router, folder structure) | complete |
-| 1.2 | Core Type Definitions (datamodels → game-engine/types) | pending |
-| 1.3 | Constants File (GAME_DRAW_ANIMATION_MS, CRAYOLA_8, defaults) | pending |
-| 1.4 | Game Contract Interface (contract.ts, GameContract) | pending |
-| 2.1 | Settings Persistence Layer (loadSettings/saveSettings) | pending |
-| 2.2 | Settings Screen UI (difficulty, display name, colors) | pending |
-| 3.1 | Home Screen (Play + Settings buttons) | pending |
-| 3.2 | Play Screen - Game Grid (placeholder tiles) | pending |
-| 4.1 | Game Engine Core (runner: dispatchAction, getCurrentTurn, etc.) | pending |
-| 4.2 | Game Registry (registerGame, getGame) | pending |
-| 5.1 | Tic Tac Toe Game Contract (reducer, validation, AI, metadata) | pending |
-| 5.2 | Tic Tac Toe UI Component (3×3 board) | pending |
-| 5.3 | Game Screen Shell (session, turn indicator, AI turns) | pending |
-| 5.4 | Game Menu Screen (Single / 1 device / Multi-device) | pending |
-| 5.5 | Update Play Screen to Show Games (from registry) | pending |
-| 6.1 | Pass-and-Play Mode Support | pending |
-| 7.1 | Player Color Mapping Logic | pending |
-| 7.2 | Player Display Name Logic | pending |
-| 7.3 | Player Strip Component (Settings + in-game) | pending |
-| 8.1 | Bluetooth Library Evaluation & Decision | pending |
-| 8.2 | Bluetooth Sync Layer - Discovery | pending |
-| 8.3 | Bluetooth Sync Layer - Message Protocol | pending |
-| 8.4 | Lobby Screen - Host | pending |
-| 8.5 | Lobby Screen - Join | pending |
-| 8.6 | Multi-Device Game Screen Integration | pending |
-| 8.7 | Update Game Menu for Multi-Device | pending |
-| 9.1 | Dots Game Contract | pending |
-| 9.2 | Dots Game UI Component | pending |
-| 9.3 | Connect 4 Game Contract | pending |
-| 9.4 | Connect 4 Game UI Component | pending |
-| 10.1 | Paper Aesthetic Styling | pending |
-| 10.2 | Draw Animation | pending |
-| 10.3 | Turn Indicator Enhancement | pending |
-| 10.4 | Error Handling & Edge Cases | pending |
+| 1.2 | Core Type Definitions (datamodels → game-engine/types) | complete |
+| 1.3 | Constants File (GAME_DRAW_ANIMATION_MS, CRAYOLA_8, defaults) | complete |
+| 1.4 | Game Contract Interface (contract.ts, GameContract) | complete |
+| 2.1 | Settings Persistence Layer (loadSettings/saveSettings) | complete |
+| 2.2 | Settings Screen UI (difficulty, display name, colors) | complete |
+| 3.1 | Home Screen (Play + Settings buttons) | complete |
+| 3.2 | Play Screen - Game Grid (placeholder tiles) | complete |
+| 4.1 | Game Engine Core (runner: dispatchAction, getCurrentTurn, etc.) | complete |
+| 4.2 | Game Registry (registerGame, getGame) | complete |
+| 5.1 | Tic Tac Toe Game Contract (reducer, validation, AI, metadata) | complete |
+| 5.2 | Tic Tac Toe UI Component (3×3 board) | complete |
+| 5.3 | Game Screen Shell (session, turn indicator, AI turns) | complete |
+| 5.4 | Game Menu Screen (Single / 1 device / Multi-device) | complete |
+| 5.5 | Update Play Screen to Show Games (from registry) | complete |
+| 6.1 | Pass-and-Play Mode Support | complete |
+| 7.1 | Player Color Mapping Logic | complete |
+| 7.2 | Player Display Name Logic | complete |
+| 7.3 | Player Strip Component (Settings + in-game) | complete |
+| 8.1 | Bluetooth Library Evaluation & Decision | complete |
+| 8.2 | Bluetooth Sync Layer - Discovery | complete |
+| 8.3 | Bluetooth Sync Layer - Message Protocol | complete |
+| 8.4 | Lobby Screen - Host | complete |
+| 8.5 | Lobby Screen - Join | complete |
+| 8.6 | Multi-Device Game Screen Integration | complete |
+| 8.7 | Update Game Menu for Multi-Device | complete |
+| 9.1 | Dots Game Contract | complete |
+| 9.2 | Dots Game UI Component | complete |
+| 9.3 | Connect 4 Game Contract | complete |
+| 9.4 | Connect 4 Game UI Component | complete |
+| 10.1 | Paper Aesthetic Styling | complete |
+| 10.2 | Draw Animation | complete |
+| 10.3 | Turn Indicator Enhancement | complete |
+| 10.4 | Error Handling & Edge Cases | complete |
 
 ---
 
