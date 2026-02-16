@@ -24,7 +24,8 @@ export function createSession(
   if (gameType === "tic-tac-toe") {
     state = createInitialTicTacToeState();
   } else if (gameType === "dots") {
-    state = createInitialDotsState();
+    const size = Math.min(9, Math.max(5, settings.dotsGridSize ?? 6));
+    state = createInitialDotsState(size, size);
   } else if (gameType === "connect4") {
     state = createInitialConnect4State();
   } else {
@@ -37,8 +38,9 @@ export function createSession(
       { id: "ai", displayName: "AI", order: 1 },
     ];
   } else {
+    // Player 1 == Me: use display name and "my color" for Player 1
     players = [
-      { id: generateId(), displayName: "Player 1", order: 0 },
+      { id: generateId(), displayName: settings.displayName, order: 0 },
       { id: generateId(), displayName: "Player 2", order: 1 },
     ];
   }

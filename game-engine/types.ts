@@ -23,6 +23,8 @@ export interface UserSettings {
   displayName: string;
   myColor: string;
   opponent1Color: string;
+  /** Dots game grid size (5-9). Default 6. */
+  dotsGridSize?: number;
 }
 
 // --- 3. Game session ---

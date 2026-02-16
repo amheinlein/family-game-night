@@ -22,3 +22,8 @@ export const DEFAULT_DISPLAY_NAME = "Player 1";
 
 export const DEFAULT_MY_COLOR = CRAYOLA_8_COLORS[4]; // Blue
 export const DEFAULT_OPPONENT1_COLOR = CRAYOLA_8_COLORS[0]; // Red
+
+/** Dots game grid size range. */
+export const DOTS_GRID_MIN = 5;
+export const DOTS_GRID_MAX = 9;
+export const DEFAULT_DOTS_GRID_SIZE = 6;

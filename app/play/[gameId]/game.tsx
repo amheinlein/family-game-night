@@ -45,7 +45,7 @@ export default function GameScreen() {
     } catch {
       setSession({ type: "INIT", payload: null });
     }
-  }, [gameType, modeVal, settings?.displayName]);
+  }, [gameType, modeVal, settings?.displayName, settings?.dotsGridSize]);
 
   const dispatch = useCallback((action: GameAction) => setSession(action), []);
 
@@ -90,7 +90,11 @@ export default function GameScreen() {
   const currentTurn = getCurrentTurn(session);
   const winner = getWinner(session);
   const over = isGameOver(session);
-  const myPlayerId = session.mode === "single" ? session.players[0]?.id ?? null : null;
+  // Player 1 == Me: single (vs AI) and singleDevice (pass-and-play) both treat Player 1 as "me"
+  const myPlayerId =
+    session.mode === "single" || session.mode === "singleDevice"
+      ? session.players[0]?.id ?? null
+      : null;
   const colors: [string, string] = [
     getPlayerColor(session.players[0], session, myPlayerId, settings),
     getPlayerColor(session.players[1], session, myPlayerId, settings),

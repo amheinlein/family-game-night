@@ -8,8 +8,8 @@ import type { DotsState, DotsAction } from "../../game-engine/types";
 import { registerGame } from "../../game-engine/registry";
 import type { GameState, GameAction } from "../../game-engine/types";
 
-const DEFAULT_ROWS = 3;
-const DEFAULT_COLS = 3;
+const DEFAULT_ROWS = 6;
+const DEFAULT_COLS = 6;
 
 function parseEdgeKey(key: string): { r: number; c: number; h: boolean } | null {
   const parts = key.split(",");

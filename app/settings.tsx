@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TextInput, Pressable, ScrollView } from "react-
 import { loadSettings, saveSettings } from "../settings/store";
 import type { UserSettings } from "../game-engine/types";
 import { ColorPicker } from "../components/ColorPicker";
+import { DOTS_GRID_MIN, DOTS_GRID_MAX, DEFAULT_DOTS_GRID_SIZE } from "../constants";
 
 const DIFFICULTY_MIN = 1;
 const DIFFICULTY_MAX = 10;
@@ -13,6 +14,7 @@ export default function SettingsScreen() {
   const [difficulty, setDifficulty] = useState(5);
   const [myColor, setMyColor] = useState("#00AEEF");
   const [opponent1Color, setOpponent1Color] = useState("#ED1C24");
+  const [dotsGridSize, setDotsGridSize] = useState(DEFAULT_DOTS_GRID_SIZE);
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
@@ -22,6 +24,7 @@ export default function SettingsScreen() {
       setDifficulty(s.difficulty);
       setMyColor(s.myColor);
       setOpponent1Color(s.opponent1Color);
+      setDotsGridSize(s.dotsGridSize ?? DEFAULT_DOTS_GRID_SIZE);
     });
   }, []);
 
@@ -31,6 +34,7 @@ export default function SettingsScreen() {
       displayName: displayName.trim() || "Player 1",
       myColor,
       opponent1Color,
+      dotsGridSize: Math.min(DOTS_GRID_MAX, Math.max(DOTS_GRID_MIN, dotsGridSize)),
     };
     await saveSettings(next);
     setSettings(next);
@@ -76,6 +80,21 @@ export default function SettingsScreen() {
 
       <ColorPicker label="My color" value={myColor} onSelect={setMyColor} />
       <ColorPicker label="Opponent 1 color" value={opponent1Color} onSelect={setOpponent1Color} />
+
+      <Text style={styles.label}>Dots game grid size ({DOTS_GRID_MIN}×{DOTS_GRID_MIN}–{DOTS_GRID_MAX}×{DOTS_GRID_MAX})</Text>
+      <View style={styles.difficultyRow}>
+        {Array.from({ length: DOTS_GRID_MAX - DOTS_GRID_MIN + 1 }, (_, i) => DOTS_GRID_MIN + i).map((n) => (
+          <Pressable
+            key={n}
+            style={[styles.difficultyBtn, dotsGridSize === n && styles.difficultyBtnSelected]}
+            onPress={() => setDotsGridSize(n)}
+          >
+            <Text style={dotsGridSize === n ? styles.difficultyBtnTextSelected : styles.difficultyBtnText}>
+              {n}×{n}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
 
       <Pressable style={styles.saveBtn} onPress={handleSave}>
         <Text style={styles.saveBtnText}>{saved ? "Saved!" : "Save"}</Text>
